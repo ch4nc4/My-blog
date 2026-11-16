@@ -1,0 +1,54 @@
+# Replace this with your public site URL when you choose hosting.
+baseURL = "http://localhost:1313/"
+locale = "en-US"
+defaultContentLanguage = "en"
+title = "My Blog"
+theme = "blank-magazine"
+enableRobotsTXT = true
+timeZone = "Europe/Bucharest"
+
+[pagination]
+  pagerSize = 9
+
+[params]
+  description = "A personal journal of ideas, discoveries, and everyday life."
+  author = "Your Name"
+  authorBio = "A space for notes, stories, and things worth remembering."
+  slogan = "Notes on life and everything in between."
+  mainSections = ["posts"]
+  # email = "you@example.com"
+  # authorAvatar = "/images/avatar.jpg"
+  # instagram = "https://instagram.com/yourhandle/"
+  # twitter = "https://twitter.com/yourhandle"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 3
+[[menu.main]]
+  name = "Gallery"
+  url = "/gallery/"
+  weight = 4
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 5
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 6
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
