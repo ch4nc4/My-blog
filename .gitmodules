@@ -1,0 +1,3 @@
+[submodule "themes/blank-magazine"]
+	path = themes/blank-magazine
+	url = https://github.com/codesign2020/blank-magazine.git
