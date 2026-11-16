@@ -1,0 +1,110 @@
+:root {
+    /* Backgrounds */
+    --color-bg: #f3e8df;
+    --color-bg-alt: #e8d1c5;
+
+    /* Text */
+    --color-text: #452829;
+    --color-text-secondary: #57595b;
+    --color-text-muted: #57595b;
+    --color-text-faint: #57595b;
+
+    /* Links and accents */
+    --color-link: #452829;
+    --color-link-hover: #57595b;
+    --color-accent: #452829;
+
+    /* Dividers */
+    --divider-width: 2px;
+    --color-border: #e8d1c5;
+    --color-border-light: #e8d1c5;
+}
+
+/* Make section and page separators a little more defined. */
+.section-label .label-line,
+.page-divider {
+    height: var(--divider-width);
+}
+
+.site-header,
+.post-list-item,
+.tag-detail-group,
+.tag-post-item {
+    border-bottom-width: var(--divider-width);
+}
+
+.site-footer,
+.footer-bottom,
+.pagination,
+.gallery-nav,
+.post-content h2,
+.post-content hr {
+    border-top-width: var(--divider-width);
+}
+
+/* Override the theme's fixed white header. */
+.site-header {
+    background: #ff608296;
+    border-bottom: 0;
+}
+
+/* A repeating pink star trim, decorative and clear of the navigation links. */
+.site-header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24'%3E%3Ctext x='0' y='18' font-family='Georgia,serif' font-size='17' fill='%23c74770' textLength='180' lengthAdjust='spacing'%3E⁺˚⋆｡°✩₊✩°｡⋆˚⁺%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: center;
+    pointer-events: none;
+}
+
+/* Gray body copy, with burgundy headings retained. */
+.post-content,
+.about-content {
+    color: var(--color-text-secondary);
+}
+
+.post-content :is(h1, h2, h3, h4, h5, h6),
+.about-content :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--color-text);
+}
+
+::selection {
+    background: #452829;
+    color: #f3e8df;
+}
+
+/* About: photo beside the introduction, aligned with the page content. */
+.about-page .about-hero-inner {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+.about-page .about-hero-text {
+    min-width: 0;
+    text-align: left;
+}
+
+.about-page .about-hero-avatar {
+    margin: 0;
+    border-radius: 25%;
+}
+
+.about-page .about-subtitle {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (max-width: 600px) {
+    .about-page .about-hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

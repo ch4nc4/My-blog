@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Locale | default "en-US" }}">
+<html lang='{{ .Site.Language.Locale | default "en-US" }}'>
+
 <head>
   {{ partial "head.html" . }}
+  <link rel="stylesheet" href='{{ "css/custom.css" | relURL }}?v={{ crypto.SHA256 (readFile "static/css/custom.css") }}'>
 </head>
+
 <body>
   {{ partial "header.html" . }}
   <main class="site-main">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
-  <script src="{{ "js/main.js" | relURL }}?v={{ now.Unix }}"></script>
+  <script src='{{ "js/main.js" | relURL }}?v={{ now.Unix }}'></script>
 </body>
+
 </html>

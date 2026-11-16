@@ -2,7 +2,7 @@
 baseURL = "http://localhost:1313/"
 locale = "en-US"
 defaultContentLanguage = "en"
-title = "My Blog"
+title = "Flat white, to go ‧𓍢ִ໋☕ ׂ 𓈒 ⋆ ۪ "
 theme = "blank-magazine"
 enableRobotsTXT = true
 timeZone = "Europe/Bucharest"
@@ -11,9 +11,8 @@ timeZone = "Europe/Bucharest"
   pagerSize = 9
 
 [params]
-  description = "A personal journal of ideas, discoveries, and everyday life."
-  author = "Your Name"
-  authorBio = "A space for notes, stories, and things worth remembering."
+  author = "Raluca Ionete - aka Chanca"
+  authorBio = "Not a blog, not a space for tech ideas, a slice of myself digitalized"
   slogan = "Notes on life and everything in between."
   mainSections = ["posts"]
   # email = "you@example.com"
@@ -38,16 +37,11 @@ timeZone = "Europe/Bucharest"
   url = "/gallery/"
   weight = 4
 [[menu.main]]
-  name = "Tags"
-  url = "/tags/"
-  weight = 5
-[[menu.main]]
   name = "About"
   url = "/about/"
   weight = 6
 
 [taxonomies]
-  tag = "tags"
   category = "categories"
 
 [outputs]
