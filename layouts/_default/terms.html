@@ -4,8 +4,8 @@
 <section class="page-header">
     <div class="container">
         <p class="page-eyebrow">CATEGORIES</p>
-        <h1 class="page-title">分类</h1>
-        <p class="page-desc">按栏目浏览所有文章</p>
+        <h1 class="page-title">Categories</h1>
+        <p class="page-desc">Browse posts by category</p>
         <div class="page-divider"></div>
     </div>
 </section>
@@ -13,8 +13,8 @@
 <section class="page-header">
     <div class="container">
         <p class="page-eyebrow">TAGS</p>
-        <h1 class="page-title">标签</h1>
-        <p class="page-desc">按主题浏览所有文章</p>
+        <h1 class="page-title">Tags</h1>
+        <p class="page-desc">Browse posts by topic</p>
         <div class="page-divider"></div>
     </div>
 </section>
@@ -37,7 +37,7 @@
             <div class="tag-detail-group">
                 <h3 class="tag-detail-title">
                     <a href="{{ .Page.Permalink }}">{{ if not $isCat }}#{{ end }}{{ .Page.Title }}</a>
-                    <span class="tag-detail-count">{{ .Count }} 篇文章</span>
+                    <span class="tag-detail-count">{{ .Count }} posts</span>
                 </h3>
                 <div class="tag-detail-posts">
                     {{ range first 5 .Pages }}
@@ -47,7 +47,7 @@
                     </a>
                     {{ end }}
                     {{ if gt .Count 5 }}
-                    <a href="{{ .Page.Permalink }}" class="tag-post-more">查看全部 {{ .Count }} 篇 →</a>
+                    <a href="{{ .Page.Permalink }}" class="tag-post-more">View all {{ .Count }} posts →</a>
                     {{ end }}
                 </div>
             </div>

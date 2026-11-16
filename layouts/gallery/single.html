@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{/* 自动汇总相册图片：同目录本地图片 + front matter 的 photos */}}
+{{/* Collect album images from page resources and front matter. */}}
 {{ $photos := partial "gallery-photos.html" . }}
 <article class="gallery-single">
     <header class="gallery-header">
@@ -10,9 +10,9 @@
             <p class="gallery-desc">{{ . }}</p>
             {{ end }}
             <div class="gallery-meta">
-                <span>{{ len $photos }} 张照片</span>
+                <span>{{ len $photos }} photos</span>
                 <span class="meta-sep">·</span>
-                <time>{{ .Date.Format "2006年01月02日" }}</time>
+                <time>{{ .Date.Format "January 2, 2006" }}</time>
             </div>
             <div class="page-divider"></div>
         </div>
@@ -31,7 +31,7 @@
             <div class="photo-masonry">
                 {{ range $index, $photo := $photos }}
                 <figure class="photo-item" data-index="{{ $index }}">
-                    <img src="{{ $photo }}" alt="{{ $.Title }} - 照片 {{ add $index 1 }}" loading="lazy"
+                    <img src="{{ $photo }}" alt="{{ $.Title }} - Photo {{ add $index 1 }}" loading="lazy"
                         onclick="openLightbox({{ $index }})">
                 </figure>
                 {{ end }}
@@ -41,10 +41,10 @@
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <button class="lightbox-close" aria-label="关闭">×</button>
-        <button class="lightbox-prev" onclick="event.stopPropagation(); prevPhoto()" aria-label="上一张">‹</button>
+        <button class="lightbox-close" aria-label="Close">×</button>
+        <button class="lightbox-prev" onclick="event.stopPropagation(); prevPhoto()" aria-label="Previous photo">‹</button>
         <img id="lightbox-img" src="" alt="">
-        <button class="lightbox-next" onclick="event.stopPropagation(); nextPhoto()" aria-label="下一张">›</button>
+        <button class="lightbox-next" onclick="event.stopPropagation(); nextPhoto()" aria-label="Next photo">›</button>
         <div class="lightbox-counter" id="lightbox-counter"></div>
     </div>
 

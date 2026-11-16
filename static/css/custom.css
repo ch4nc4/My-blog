@@ -18,6 +18,17 @@
     --divider-width: 2px;
     --color-border: #e8d1c5;
     --color-border-light: #e8d1c5;
+    --font-weight-body: 500;
+}
+
+/* Slightly heavier reading text; headings keep their existing emphasis. */
+body {
+    font-weight: var(--font-weight-body);
+}
+
+.tag-detail-count,
+.about-quote-text {
+    font-weight: var(--font-weight-body);
 }
 
 /* Make section and page separators a little more defined. */
@@ -107,4 +118,9 @@
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+.about-subtitle,
+.home-about-desc {
+    white-space: pre-line;
 }

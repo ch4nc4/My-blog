@@ -99,6 +99,6 @@ Local Hugo template overrides in `layouts/` keep the theme's styling while:
 - Rendering your About content without the theme's hardcoded demo biography.
 - Using Hugo's current locale API in the base layout.
 
-Some upstream gallery, taxonomy, search, and pagination labels remain in Chinese;
-setting the content language alone does not translate those hardcoded labels.
-They can be customized later through local template/static overrides.
+Local template and JavaScript overrides translate the gallery, category, search,
+menu, and pagination labels into English. Preserve these overrides when updating
+the theme, and review upstream changes before incorporating them.

@@ -21,12 +21,12 @@
                     <img src="{{ index . 0 }}" alt="{{ $.Title }}" loading="lazy">
                     {{ end }}
                     <div class="gallery-card-overlay">
-                        <span class="gallery-count">{{ len $photos }} 张照片</span>
+                        <span class="gallery-count">{{ len $photos }} photos</span>
                     </div>
                 </div>
                 <div class="gallery-card-info">
                     <h3 class="gallery-card-title">{{ .Title }}</h3>
-                    <p class="gallery-card-date">{{ .Date.Format "2006年01月" }}</p>
+                    <p class="gallery-card-date">{{ .Date.Format "January 2006" }}</p>
                     {{ with .Description }}
                     <p class="gallery-card-desc">{{ . | truncate 80 }}</p>
                     {{ end }}

@@ -11,12 +11,19 @@ timeZone = "Europe/Bucharest"
   pagerSize = 9
 
 [params]
-  author = "Raluca Ionete - aka Chanca"
-  authorBio = "Not a blog, not a space for tech ideas, a slice of myself digitalized"
+  author = "Chanca"
+authorBio = """
+### A literature fiend, a lover of all things art, tech enthusiast by choice
+### And ultimately just a girl... interrupted.
+
+*Chanca* is the nickname my best friend from highschool gave me (as back then my Instagram username was *ralu_chan*).
+
+*Definition: -chan is a diminutive and affectionate Japanese honorific added to the end of a person's name, a pet's name, or a cute object.*
+"""
   slogan = "Notes on life and everything in between."
   mainSections = ["posts"]
   # email = "you@example.com"
-  # authorAvatar = "/images/avatar.jpg"
+  authorAvatar = "/images/chancas-avatar.jpeg"
   # instagram = "https://instagram.com/yourhandle/"
   # twitter = "https://twitter.com/yourhandle"
 
